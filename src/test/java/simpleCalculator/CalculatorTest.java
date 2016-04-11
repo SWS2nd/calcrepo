@@ -4,7 +4,8 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-public class CalculatorTest {
+public 
+class CalculatorTest {
 
 	@Test
 	public void testAdd() {
@@ -18,6 +19,15 @@ public class CalculatorTest {
 		Calculator calc = new Calculator();
 		calc.sub(10, 20);
 		assertEquals(-10, calc.getResult());
+	}
+	
+	@Test
+	public void testInc() {
+		Calculator calc = new Calculator();
+		calc.inc(10);
+		assertEquals(10, calc.getResult());
+		calc.inc(30);
+		assertEquals(40, calc.getResult());
 	}
 	
 	@Test
